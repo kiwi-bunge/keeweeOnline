@@ -1,0 +1,173 @@
+@media only screen and ( max-width: 765px){
+    .primerDegrade{
+        .navbar{
+            background-color: black;  // una solucion en lugar de cambiar la opacidad del navbar 
+            padding-top: 0;
+            padding-bottom: 0;
+
+            
+            
+            .nav-item{
+                margin-right: 0; 
+                margin-top: 10px;
+            }
+            .navbar-nav{
+                align-items: center;
+            }
+            .dropdown-toggle{
+                text-align: center;
+            }
+            .dropdown-menu-dark{
+                background-color: $negroTranslucido;
+                .dropdown-item{
+                    text-align: center;
+                }
+            }
+            a{
+                padding: 15px;
+            }
+        }
+
+        .tittleContainer{
+            text-align: center;
+
+            h1{
+                font-size: 12vw;
+                font-weight: 400;
+            }
+            h2{
+                max-width: 300px;
+                margin-top: 56px;
+                font-size: 28px;
+                font-weight: 400;
+            }
+
+        }
+    }
+
+
+    .segundoDegrade{
+        padding: 0;
+    }
+    .separador{
+        padding: 0;
+    }
+
+    .containerServicios{  
+        //sin el background
+ 
+        box-shadow: none;
+        background-color: rgba(255, 255, 255, 0);
+        
+
+
+        padding-top: 40px;
+        height: 780px;
+        justify-content: flex-start;
+        flex-direction: column;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+
+        .containerServicios__Texto{
+            margin-left: 14vw;
+            text-align: left;
+        }
+        .containerServicios__Cards{
+                margin: 0;
+                padding-left: 14vw;
+                height: auto;
+                display: flex;
+                white-space: nowrap;
+                overflow-x: auto;
+                width: 100%;
+
+                .containerServicios__CardsLeft{
+                    padding-top: 0px;
+                    height: auto;
+                    display: inline;
+                    vertical-align: middle;
+                    display: flex; 
+                    align-items: center;
+                    flex-direction: row;
+                    margin: 0;
+                }
+                .containerServicios__CardsRight{
+                    padding-top: 0px;
+                    height: auto;
+                    display: inline;
+                    vertical-align: middle;
+                    display: flex; 
+                    align-items: center;
+                    flex-direction: row;
+                    margin: 0;
+                }
+        }
+        .customCard{
+            margin-right: 16px;
+            margin-left: 16px;
+            white-space: normal;
+            p{
+                max-width: 180px;
+            }
+        }
+
+        .containerServicios__About{
+                width: 350px;
+                text-align: left;
+                margin-left: 10vw;
+            h3{
+                font-size: 36px;
+                margin-bottom: 30px;
+            }
+            p{
+                font-weight: 300;
+                margin-top: 0;
+                margin-right: 10vw;
+                padding-right: 15px;
+            }
+        }
+        .imgAbout{
+            display: none;
+        }
+    }
+
+
+    .containerContact{
+        justify-content: flex-end;
+        padding-bottom: 80px;
+        input{
+            height: 48px;
+        }
+        .buttonContact{
+           // @include styleButtonHover();
+            margin-top: 30px;
+            width: 296px;  
+            height: 50px;
+        }
+    }
+    .footerContainer{
+        height: 790px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        .footerContainer__Logotipo{
+            img{
+                height: 140px;
+            }
+        }
+    }
+
+
+    // 🡣 services pages 🡣 //
+    .servicesDegrade{
+        .containerServices{
+
+            img{
+                display: none;
+            }
+            margin-left: 20px;
+
+        }
+    }
+}

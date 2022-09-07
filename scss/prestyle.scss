@@ -1,0 +1,361 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+$violeta: #460265;
+$magenta: #a70080;
+$azul: #280F71;
+$negro: #000000;
+$blanco: #ffffff;
+$footerColor: #dcecff;
+$negroTranslucido: #000000a8;
+
+@mixin styleButton {
+    border: 2px solid $magenta;
+    color: $blanco;
+}
+
+@mixin styleButtonHover {
+    background-color: $magenta;
+    border: 2px solid $magenta;
+}
+
+::-webkit-scrollbar {
+    display: none; // oculta la barra de scroll
+}
+
+@import "./partials/components/stars";
+
+
+.primerDegrade{
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, $violeta 48%, $magenta 100%);
+    header{
+        height: 90px;
+            .scrolled-down{
+                transform:translateY(-100%); transition: all 0.3s ease-in-out;
+              }
+              .scrolled-up{
+                transform:translateY(0); transition: all 0.3s ease-in-out;
+              }
+    }
+    .navbar{
+        width: 100vw;
+        justify-content: space-between;
+        background-color: $negroTranslucido;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        .nav-item{
+            margin-right: 50px; 
+        }
+        .navLink:hover{
+            border-bottom: 3px solid $magenta;
+        }
+        .buttonContact{
+            @include styleButton();
+            text-decoration: none;
+            width: 130px;  
+        }
+        .buttonContact:hover{
+            @include styleButtonHover();
+        }
+        .navbar-collapse{
+            flex-grow: inherit;
+        }
+        .navbar-brand{
+            padding: 0;
+        }
+        .dropdown-menu-dark{
+            background-color: $negro;
+        }
+    }
+    .tittleContainer{ // utilizo flex para alinear el texto
+        color: $blanco;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        height: 80vh;
+        justify-content: center;
+        width: 100vw;
+        h1{
+            font-size: 4.5vw;
+        }
+        h2{
+            font-size: 2vw;
+        }
+    
+    }
+    .tittleContainer1 {
+        color: #ffffff;
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        height: 80vh;
+        justify-content: center;
+        width: 45%;
+        margin-right: 15px;
+    }
+    @import "./partials/components/chevron";
+    .swipeDown{
+        font-size: 60px;
+        font-weight: bolder;
+        color: $blanco;
+    }
+}
+.segundoDegrade{
+    background: linear-gradient(180deg, $magenta 0%, $violeta 80%, $azul 100%);
+     padding-bottom: 130px;
+}
+
+
+.containerServicios{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #000000c4;
+    height: 928px;
+    width: 60vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
+
+    -webkit-box-shadow: 0px 0px 37px 15px rgba(0,0,0,0.49); 
+    box-shadow: 0px 0px 37px 15px rgba(0,0,0,0.49);
+    
+    .containerServicios__Texto{
+        margin: 20px;
+        color: $blanco;
+        font-size: 16px;
+        text-align: center;
+        max-width: 400px;
+        h3{
+            margin-bottom: 60px;
+            font-size: 48px;
+        }
+    }
+
+    .containerServicios__Cards{
+        display: flex;
+        flex-direction: row;
+            .containerServicios__CardsLeft{
+                display: flex; 
+                align-items: center;
+                flex-direction: column;
+                padding-top: 180px;
+                margin-right: 37px;
+                margin-top: -48px;
+            }
+            .containerServicios__CardsRight{
+                display: flex; 
+                align-items: center;
+                flex-direction: column;
+                padding-top: 180px;
+                margin-right: 4vw;
+                margin-top: 112px;
+            }
+            a{
+                text-decoration: none;
+            }
+    }
+
+    .customCard{
+        background-image: url(../img/cards/card.svg);
+        backdrop-filter: blur(8px);
+        width: 270px;
+        height: 288px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-evenly;
+        color: $blanco;
+
+        margin-top: 32px;
+
+        img{
+            width: 50px;
+        }
+        .customCard__Tittle{
+            font-size: 14px;
+        }
+        p{
+            font-size: 17px;
+        }
+    }
+    .customCard:hover{
+        background-image: url(../img/cards/cardHover.svg);
+    }
+
+    .containerServicios__About{
+        text-align: center;
+        max-width: 900px;
+        color: $blanco;
+        h3{
+            font-size: 48px;
+            margin-bottom: 60px;
+        }
+        p{
+            padding-right: 40px;
+            margin-top: 60px;
+            text-align: left;
+            font-size: 16px;
+        }
+    }
+}
+
+.separador{
+    padding-bottom: 180px;
+}
+
+.containerContact{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 800px;
+    background: rgba(0, 0, 0, 0.15);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(13,16,96,0.9920343137254902) 55%, $azul 100%);
+    .containerContact__text{
+        margin-top: 100px;
+        color: $blanco;
+        text-align: center;
+        h3{
+            font-size: 40px;
+        }
+        p{
+            font-size: 30px;
+        }
+    }
+    .containerContact__inputLabel{
+        color: $blanco;
+        margin: 15px;
+    }
+    .containerContact__textArea{
+        height: 200px;
+    }
+    form{
+        margin-top: 60px;
+        max-width: 1200px;
+        width: 80vw;
+    }
+    input{
+        color: $blanco;
+        background-color: $negroTranslucido;
+        border: $negroTranslucido;
+        border-bottom: 4px solid $blanco;
+        border-radius: 10px 10px 0 0;
+    }
+    input:hover{
+        background-color: #8a4a8b46;
+        border-bottom: 4px solid $magenta;
+        color: $blanco;
+    }
+    .buttonContact{
+        @include styleButton();
+        margin-top: 30px;
+        width: 130px;  
+    }
+    .buttonContact:hover{
+        @include styleButtonHover()
+    }
+}
+
+.footerContainer{
+    background-color: $footerColor;
+    width: 100%;
+    height: 280px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    .footerContainer__Logotipo{
+        img{
+            height: 140px;
+        }
+    }
+    li{
+        list-style-type: none;
+        text-decoration: none;
+        
+    }
+    ul{
+        padding: 0;
+    }
+    .footerTextStyle{
+        color: $magenta;
+        font-weight: bold;
+
+    }
+
+    .footerContainer__Items{
+        margin-top: 40px;
+        .itemsRedes{
+            .linkFooter{
+                display: inline-block;
+                color: $azul;
+                font-size: 14;
+                font-weight: 500;
+                font-style: normal;
+                margin-left: 5px;
+            }
+            .nav-link{
+                padding-left: 0;
+                padding-right: 0;
+
+            }
+        }
+    }
+
+}
+
+// 🡣 services pages 🡣 //
+.servicesDegrade{
+    .primerDegrade{
+        background: none; //dehabilito el fondo del primer degrade para que no se superponga
+        background: rgb(101,47,255);
+        background: linear-gradient(45deg, rgba(101,47,255,1) 0%, rgba(0,0,0,1) 14%, rgba(0,0,0,1) 79%, rgba(198,52,171,1) 100%);
+
+        .containerServices{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            height: 95vh;
+            padding-bottom: 70px;
+            padding-top: 50px;
+            .containerServices__text{
+                h3{
+                    font-size: 48px;
+                    margin-bottom: 56px;
+                }
+                p{
+                    margin-bottom: 33px;
+                }
+                margin-right: 10vw;
+                width: 400px;
+                color: white;
+                .buttonContact{
+                    @include styleButton();
+                    text-decoration: none;
+                    width: 130px;  
+                }
+                .buttonContact:hover{
+                    @include styleButtonHover();
+                }
+            }
+    
+            .containerServices__img{
+                width: 270px;
+                height: 640px;
+                //filter: drop-shadow(6px 6px 17px rgba(0, 0, 0, 0.555)); esto es para que tenga sombra la img
+            }
+        }
+    }
+}
+
+
+@import "./partials/laptop";
+@import "./partials/mobile";
+
+
+
